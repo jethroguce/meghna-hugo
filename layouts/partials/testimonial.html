@@ -9,20 +9,26 @@
                     {{ range .Site.Data.testimonial.testimonialItem }}
                     {{"<!-- testimonial single -->" | safeHTML}}
                     <div class="item text-center">
-
+                        
+                        {{ if .image }}
                         {{"<!-- client photo -->" | safeHTML}}
                         <div class="client-thumb">
                             <img src="{{ .image | absURL }}" class="img-fluid" alt="Meghna">
                         </div>
+                        {{ end }}
 
                         {{"<!-- client info -->" | safeHTML}}
                         <div class="client-info">
                             <div class="client-meta">
-                                <h3>{{ .name }}</h3>
+                                <h3><strong>{{ .name }}</strong></h3>
+                                <h5>{{ .position }}</h5>
                                 <span>{{ .date }}</span>
                             </div>
                             <div class="client-comment">
                                 <p>{{ .content }}</p>
+                            </div>
+                            <div class="client-comment">
+                                <p>{{ .content2 }}</p>
                             </div>
                         </div>
                     </div>
