@@ -12,25 +12,18 @@
                         
                         {{ if .image }}
                         {{"<!-- client photo -->" | safeHTML}}
-                        <div class="client-thumb">
-                            <img src="{{ .image | absURL }}" class="img-fluid" alt="Meghna">
+                        <div class="offset-lg-4 col-lg-4">
+                            <div class="portfolio-block">
+                                <img src="{{ .image | absURL }}" class="img-fluid" alt="reference letter">
+                                <div class="caption">
+                                    <a class="search-icon image-popup" data-effect="mfp-with-zoom" href="{{ .image | absURL}}" data-lightbox="image-1">
+                                        <i class="{{ .icon }}"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                         {{ end }}
 
-                        {{"<!-- client info -->" | safeHTML}}
-                        <div class="client-info">
-                            <div class="client-meta">
-                                <h3><strong>{{ .name }}</strong></h3>
-                                <h5>{{ .position }}</h5>
-                                <span>{{ .date }}</span>
-                            </div>
-                            <div class="client-comment">
-                                <p>{{ .content }}</p>
-                            </div>
-                            <div class="client-comment">
-                                <p>{{ .content2 }}</p>
-                            </div>
-                        </div>
                     </div>
                     {{"<!-- /testimonial single -->" | safeHTML}}
                     {{ end }}

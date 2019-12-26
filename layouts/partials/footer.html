@@ -18,6 +18,7 @@
 					<a href="{{ .Site.BaseURL | absURL }}">
 						<img src="{{ .Site.Params.logo | absURL }}" alt="Meghna" />
 					</a>
+          <h3>{{ .Site.Params.footer.subheader }}</h3>
 					<br>
 					<p>Design And Developed by <a href="{{ .Site.Params.footer.copyrightURL | absURL }}"> {{ with .Site.Params.footer.copyright }} {{ . }} {{ end }} </a>. Copyright &copy; <script>
 							document.write(new Date().getFullYear())
